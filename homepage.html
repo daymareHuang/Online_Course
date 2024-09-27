@@ -25,6 +25,13 @@
         .footer_a:link{
             text-decoration: none;
         }
+        .reaction_opacity{
+            opacity: 0.75;
+        }
+
+        .reaction_opacity:hover{
+            opacity: 1;
+        }
 
 
         /* 以下測試 after testing pls remove all the class*/
@@ -43,7 +50,7 @@
 </head>
 
 <body>
-    <!-- 探索內容還沒 -->
+
     <div class="container" style="padding-top: 100px;">
 
         <!-- navbar -->
@@ -51,7 +58,7 @@
         <nav class="navbar navbar-expand-lg bg-primary fixed-top">
             <div class="container-fluid">
                 <!-- homepage icon -->
-                <a class="navbar-brand" href="#"><span class="bi bi-mortarboard-fill"></span></a>
+                <a class="navbar-brand text-light reaction_opacity" href="#" ><span class="bi bi-mortarboard-fill"> Oline Course</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +67,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle text-light reaction_opacity" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 探索
                             </a>
@@ -79,11 +86,11 @@
                     <!-- another dropdown but right -->
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light me-2 text-light" type="submit">Search</button>
+                        <button class="btn btn-outline-light me-2" type="submit">Search</button>
                     </form>
 
                     <!-- login -->
-                    <button class="btn btn-outline-light text-light" type="submit"><i class="bi bi-person"></i></button>
+                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-person"></i></button>
 
                 </div>
 
@@ -163,7 +170,7 @@
                 <div class="col-10 d-flex align-items-center">
                     <div class="card-body ">
 
-                        <div class="row w-100">
+                        <div class="row w-100 mb-3">
                             <div class="col-3 d-flex justify-content-center">
                                 <a class="btn btn-primary w-75 btn-lg" href=""><span
                                         class="bi bi-clipboard2-data-fill"></span>職場技能</a>
@@ -181,7 +188,7 @@
                             </div>
                         </div>
 
-                        <div class="row w-100">
+                        <div class="row w-100 mb-3">
                             <div class="col-3 d-flex justify-content-center">
                                 <a class="btn btn-primary w-75 btn-lg" href=""><span
                                         class="bi bi-code-square"></span>程式</a>
@@ -201,7 +208,7 @@
                             </div>
                         </div>
 
-                        <div class="row w-100">
+                        <div class="row w-100 mb-3">
                             <div class="col-3 d-flex justify-content-center">
                                 <a class="btn btn-primary w-75 btn-lg" href=""><span class="bi bi-camera2"></span>攝影</a>
                             </div>
@@ -238,17 +245,17 @@
         <div class="row ">
             <div class="col-3" style="margin:100px auto 100px auto">
                 <h5 class="text-info">關於</h5>
-                <a class="text-light footer_a" href="">關於我們</a>
+                <a class="text-light footer_a reaction_opacity" href="">關於我們</a>
                 <br>
-                <a class="text-light footer_a" href="">使用者條款</a>
+                <a class="text-light footer_a reaction_opacity" href="">使用者條款</a>
                 <br>
-                <a class="text-light footer_a" href="">服務契約</a>
+                <a class="text-light footer_a reaction_opacity" href="">服務契約</a>
                 <br>
-                <a class="text-light footer_a" href="">隱私權政策</a>
+                <a class="text-light footer_a reaction_opacity" href="">隱私權政策</a>
             </div>
             <div class="col-3"  style="margin:100px auto 100px auto">
                 <h5 class="text-info">幫助</h5>
-                <a class="text-light footer_a" href="">常見問題</a>
+                <a class="text-light footer_a reaction_opacity" href="">常見問題</a>
             </div>
             <div class="col-3"></div>
             <div class="col-3"></div>
