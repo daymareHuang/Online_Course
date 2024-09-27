@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     s
-        <title>線上課程平台:課程1</title>
+    <title>線上課程平台:課程1</title>
     <style>
         .margin_top_100 {
             margin-top: 100px;
@@ -23,15 +23,35 @@
             height: 50px;
         }
 
-        .footer_a:link{
+        .footer_a:link {
             text-decoration: none;
         }
-        .reaction_opacity{
+
+        .reaction_opacity {
             opacity: 0.75;
         }
 
-        .reaction_opacity:hover{
+        .reaction_opacity:hover {
             opacity: 1;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        #course_overview {
+
+            background-color: white;
+            border-bottom-right-radius: 100px;
+            height: 80vh;
+            padding-top: 100px;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+            margin-right: auto;
+            margin-left: auto;
         }
 
 
@@ -52,52 +72,181 @@
 
 <body>
 
-    <div class="container" style="padding-top: 100px;">
-        
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-primary fixed-top">
-            <div class="container-fluid">
-                <!-- homepage icon -->
-                <a class="navbar-brand text-light reaction_opacity" href="#" ><span class="bi bi-mortarboard-fill"> Oline Course</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light reaction_opacity" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                探索
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-    
-                    </ul>
-    
-                    <!-- another dropdown but right -->
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light me-2" type="submit">Search</button>
-                    </form>
-    
-                    <!-- login -->
-                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-person"></i></button>
-    
-                </div>
-    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+        <div class="container-fluid">
+            <!-- homepage icon -->
+            <a class="navbar-brand text-light reaction_opacity" href="#"><span class="bi bi-mortarboard-fill"> Oline
+                    Course</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light reaction_opacity" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            探索
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- another dropdown but right -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light me-2" type="submit">Search</button>
+                </form>
+
+                <!-- login -->
+                <button class="btn btn-outline-light" type="submit"><i class="bi bi-person"></i></button>
+
             </div>
+
+        </div>
+    </nav>
+
+    <!-- introduce top -->
+    <div id="course_overview">
+        <!-- breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
         </nav>
 
+        <!-- course overview -->
+        <div class="row w-100">
+            <!-- course video -->
+            <div class="col-7"><video class="w-100 rounded-3" src="./media/sayhi.mp4" controls loop muted
+                    poster="./media/poster.png"></video></div>
+            <div class="col-5">
+                <div class="card w-100 h-75">
+                    <div class="card-body">
+                        <h6 class="card-title">author</h6>
+                        <h1 class="card-title">跟著版塊做網站：用動態特效點滿視覺創意</h2>
+                            <p class="card-text">版塊帶你跟上網站設計趨勢！從團隊核心價值「動態回推設計」出發，學會設計動態特效網站！</p>
+                            <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <div class="container">
+
+        <!-- course bar -->
+        <!-- should be fixed and visible when scroll to this area -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#course_introduce">Introduction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#course_catalog">Catalog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#course_qa">Q&A</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#course_teacher_info">Teacher Information</a>
+            </li>
+        </ul>
+
+        <!-- container with sidebar -->
+        <div class="row rounded-3">
+            <!-- on the left of the course information -->
+            <div class="col-9">
+                <!-- introduce -->
+                <!-- when this scrolled to the top make the nav bar changed -->
+                <div id="course_introduce" style="margin-bottom: 75px;"> </div>
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Introduce</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+
+                <!-- catalog -->
+                <div id="course_catalog" style="margin-bottom: 75px;"> </div>
+                <div class="card w-100 margin_top_100">
+                    <div class="card-body">
+                        <h5 class="card-title">Catalog</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+
+                <!-- Q&A -->
+                <div id="course_qa" style="margin-bottom: 75px;"> </div>
+                <div class="card w-100 margin_top_100">
+                    <div class="card-body">
+                        <h5 class="card-title">Q&A</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+                <!-- teacher info -->
+                <div id="course_teacher_info" style="margin-bottom: 75px;"> </div>
+                <div class="card w-100 margin_top_100">
+                    <div class="card-body">
+                        <h5 class="card-title">Teacher Information</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- sidebar on the right of the course information  -->
+            <!-- can fix to the right top of this container -->
+            <div class="col-3" style="margin-top: 75px;">
+                <div class="card">
+                    <div class="card-header">
+                        購買單堂課
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <span class="fs-2 fw-bolder">NT$2,900</span> &nbsp;<span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
+                            <footer>
+                                <button class="btn w-100 btn-primary">立即購買</button>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- got an anchor to the bottom right it can go to the # -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
@@ -109,7 +258,7 @@
 
 
 <footer class="margin_top_100 mb-0" style="background-color:rgb(0, 49, 79);">
-    <div class="container"  >
+    <div class="container">
         <div class="row ">
             <div class="col-3" style="margin:100px auto 100px auto">
                 <h5 class="text-info">關於</h5>
@@ -121,7 +270,7 @@
                 <br>
                 <a class="text-light footer_a reaction_opacity" href="">隱私權政策</a>
             </div>
-            <div class="col-3"  style="margin:100px auto 100px auto">
+            <div class="col-3" style="margin:100px auto 100px auto">
                 <h5 class="text-info">幫助</h5>
                 <a class="text-light footer_a reaction_opacity" href="">常見問題</a>
             </div>
@@ -129,7 +278,7 @@
             <div class="col-3"></div>
         </div>
     </div>
-    
+
 </footer>
 
 </html>
