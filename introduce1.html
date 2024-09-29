@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    s
+
     <title>線上課程平台:課程1</title>
     <style>
         .margin_top_100 {
@@ -38,13 +38,17 @@
         body {
             background-color: lightblue;
         }
+        
+        #course_bar{
+            visibility: hidden;
+        }
 
         #course_overview {
 
             background-color: white;
             border-bottom-right-radius: 100px;
-            height: 80vh;
-            padding-top: 100px;
+
+            padding-top: 50px;
             --bs-gutter-x: 1.5rem;
             --bs-gutter-y: 0;
             width: 100%;
@@ -54,6 +58,7 @@
             margin-left: auto;
         }
 
+       
 
         /* 以下測試 after testing pls remove all the class*/
         .test_background {
@@ -70,10 +75,10 @@
     </style>
 </head>
 
-<body>
 
+<body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-lg bg-primary sticky-top" >
         <div class="container-fluid">
             <!-- homepage icon -->
             <a class="navbar-brand text-light reaction_opacity" href="#"><span class="bi bi-mortarboard-fill"> Oline
@@ -145,11 +150,7 @@
         </div>
     </div>
 
-
-    <div class="container">
-
-        <!-- course bar -->
-        <!-- should be fixed and visible when scroll to this area -->
+    <div id="course_bar" class=" p-3 sticky-top" style=" background-color: lightblue;">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#course_introduce">Introduction</a>
@@ -164,6 +165,13 @@
                 <a class="nav-link" href="#course_teacher_info">Teacher Information</a>
             </li>
         </ul>
+    </div>
+
+    <div class="container">
+
+        <!-- course bar -->
+        <!-- should be fixed and visible when scroll to this area -->
+
 
         <!-- container with sidebar -->
         <div class="row rounded-3">
@@ -232,7 +240,8 @@
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
-                            <span class="fs-2 fw-bolder">NT$2,900</span> &nbsp;<span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
+                            <span class="fs-2 fw-bolder">NT$2,900</span> &nbsp;<span
+                                class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
                             <footer>
                                 <button class="btn w-100 btn-primary">立即購買</button>
                             </footer>
@@ -254,6 +263,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
+
+
+        <script>
+            //JS
+            let lastPos = 0
+            const nav = document.getElementById("course_bar")
+            const navbar =document.getElementById("navbar")
+     
+            // 監聽scroll事件
+            document.addEventListener('scroll', () => {
+                let currentPos = window.scrollY;
+                    //   往下滑
+                    if (currentPos > lastPos && currentPos > 550) {
+                        nav.style.visibility="visible" //讓nav bar消失
+                        navbar.style.visibility="hidden"
+    
+                    } else {
+                        nav.style.visibility="hidden"  //讓nav bar出現
+                        navbar.style.visibility="visible"
+                    }
+                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+            })
+        
+        </script>
 </body>
 
 
