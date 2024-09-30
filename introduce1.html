@@ -54,8 +54,8 @@
 
             padding: 0 10% 0 10%;
             background-color: white;
-            border-bottom-right-radius: 100px;
-            padding-top: 75px;
+            border-radius: 10px;
+
             padding-bottom: 5%;
             --bs-gutter-x: 1.5rem;
             --bs-gutter-y: 0;
@@ -135,8 +135,11 @@
                         <!-- another dropdown but right -->
                         <div class="col-10">
                             <form class="d-flex " role="search">
-                                <input class="form-control me-2 w-100" type="search" placeholder="Search"
-                                    aria-label="Search">
+                                <div class="input-group">
+                                    <span class="input-group-text bi bi-search"></span>
+                                    <input class="form-control " type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </div>
                                 <button class="btn btn-outline-light " type="submit">Search</button>
                             </form>
                         </div>
@@ -180,8 +183,8 @@
         </div>
     </div>
 
-    <!-- introduce top -->
-    <div class="container" id="course_overview ">
+    <!-- introduce video and title -->
+    <div class="container margin_top_100 pt-3" id="course_overview">
         <!-- breadcrumb -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -327,19 +330,24 @@
         const navbar = document.getElementById("navbar")
         const collapse = document.querySelector(".navbar-toggler")
         const collapse_content = document.querySelector(".navbar-collapse")
+        const explore = document.querySelector(".dropdown-toggle")
+        const menu = document.querySelector(".dropdown-menu")
 
 
         // 監聽scroll事件
         document.addEventListener('scroll', () => {
             let currentPos = window.scrollY;
             //   往下滑
-            if (currentPos > lastPos && currentPos > 400) {
-                nav.style.top = "0px" //讓nav bar消失
-                navbar.style.top = "-60px"
+            if (currentPos > lastPos ) {
+                if (currentPos > 650){
+                    nav.style.top = "0px" //讓nav bar消失
+                    navbar.style.top = "-60px"
+                }
                 collapse.setAttribute("aria-expanded", "false")
                 collapse.classList.add("collapsed")
                 collapse_content.classList.remove("show")
-
+                explore.classList.remove("show")
+                menu.classList.remove("show")
 
             } else {
                 nav.style.top = "56px"  //讓nav bar出現
