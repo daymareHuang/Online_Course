@@ -38,9 +38,16 @@
         body {
             background-color: lightblue;
         }
-        
-        #course_bar{
-            visibility: hidden;
+
+        .course_space{
+            height: 75px;
+        }
+
+        #course_bar {
+            visibility: visible;
+            --bs-navbar-padding-x: 0;
+            --bs-navbar-padding-y: 0.5rem;
+            padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
         }
 
         #course_overview {
@@ -48,7 +55,7 @@
             background-color: white;
             border-bottom-right-radius: 100px;
 
-            padding-top: 50px;
+            padding-top: 75px;
             --bs-gutter-x: 1.5rem;
             --bs-gutter-y: 0;
             width: 100%;
@@ -58,7 +65,7 @@
             margin-left: auto;
         }
 
-       
+
 
         /* 以下測試 after testing pls remove all the class*/
         .test_background {
@@ -78,7 +85,7 @@
 
 <body>
     <!-- navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg bg-primary sticky-top" >
+    <nav id="navbar" class="navbar navbar-expand-lg bg-primary sticky-top">
         <div class="container-fluid">
             <!-- homepage icon -->
             <a class="navbar-brand text-light reaction_opacity" href="#"><span class="bi bi-mortarboard-fill"> Oline
@@ -150,7 +157,9 @@
         </div>
     </div>
 
-    <div id="course_bar" class=" p-3 sticky-top" style=" background-color: lightblue;">
+    <!-- course bar -->
+    <!-- should be fixed and visible when scroll to this area -->
+    <div id="course_bar" class=" sticky-top" style=" background-color: lightblue;">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#course_introduce">Introduction</a>
@@ -167,19 +176,16 @@
         </ul>
     </div>
 
-    <div class="container">
-
-        <!-- course bar -->
-        <!-- should be fixed and visible when scroll to this area -->
-
+    <div class="container" >
 
         <!-- container with sidebar -->
         <div class="row rounded-3">
             <!-- on the left of the course information -->
             <div class="col-9">
+
                 <!-- introduce -->
                 <!-- when this scrolled to the top make the nav bar changed -->
-                <div id="course_introduce" style="margin-bottom: 75px;"> </div>
+                <div id="course_introduce" style="margin-bottom: 115px;"></div>
                 <div class="card w-100">
                     <div class="card-body">
                         <h5 class="card-title">Introduce</h5>
@@ -192,7 +198,7 @@
                 </div>
 
                 <!-- catalog -->
-                <div id="course_catalog" style="margin-bottom: 75px;"> </div>
+                <div id="course_catalog" style="margin-bottom: 115px;"></div>
                 <div class="card w-100 margin_top_100">
                     <div class="card-body">
                         <h5 class="card-title">Catalog</h5>
@@ -205,7 +211,7 @@
                 </div>
 
                 <!-- Q&A -->
-                <div id="course_qa" style="margin-bottom: 75px;"> </div>
+                <div id="course_qa" style="margin-bottom: 115px;"></div>
                 <div class="card w-100 margin_top_100">
                     <div class="card-body">
                         <h5 class="card-title">Q&A</h5>
@@ -216,9 +222,10 @@
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
+
                 <!-- teacher info -->
-                <div id="course_teacher_info" style="margin-bottom: 75px;"> </div>
-                <div class="card w-100 margin_top_100">
+                <div id="course_teacher_info" style="margin-bottom: 115px;"> </div>
+                <div class="card w-100">
                     <div class="card-body">
                         <h5 class="card-title">Teacher Information</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -233,7 +240,7 @@
 
             <!-- sidebar on the right of the course information  -->
             <!-- can fix to the right top of this container -->
-            <div class="col-3" style="margin-top: 75px;">
+            <div class="col-3" style="margin-top: 115px;">
                 <div class="card">
                     <div class="card-header">
                         購買單堂課
@@ -265,28 +272,28 @@
         crossorigin="anonymous"></script>
 
 
-        <script>
-            //JS
-            let lastPos = 0
-            const nav = document.getElementById("course_bar")
-            const navbar =document.getElementById("navbar")
-     
-            // 監聽scroll事件
-            document.addEventListener('scroll', () => {
-                let currentPos = window.scrollY;
-                    //   往下滑
-                    if (currentPos > lastPos && currentPos > 550) {
-                        nav.style.visibility="visible" //讓nav bar消失
-                        navbar.style.visibility="hidden"
-    
-                    } else {
-                        nav.style.visibility="hidden"  //讓nav bar出現
-                        navbar.style.visibility="visible"
-                    }
-                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
-            })
-        
-        </script>
+    <script>
+        //JS
+        let lastPos = 0
+        const nav = document.getElementById("course_bar")
+        const navbar = document.getElementById("navbar")
+
+        // 監聽scroll事件
+        document.addEventListener('scroll', () => {
+            let currentPos = window.scrollY;
+            //   往下滑
+            if (currentPos > lastPos && currentPos > 400) {
+                nav.style.top = "0px" //讓nav bar消失
+                navbar.style.top = "-60px"
+
+            } else {
+                nav.style.top = "55px"  //讓nav bar出現
+                navbar.style.top = "0px"
+            }
+            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+        })
+
+    </script>
 </body>
 
 
