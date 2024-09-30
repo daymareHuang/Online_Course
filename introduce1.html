@@ -39,7 +39,7 @@
             background-color: lightblue;
         }
 
-        .course_space{
+        .course_space {
             height: 75px;
         }
 
@@ -103,12 +103,20 @@
                             探索
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">職場技能</a></li>
+                            <li><a class="dropdown-item" href="#">生活品味</a></li>
+                            <li><a class="dropdown-item" href="#">投資理財</a></li>
+                            <li><a class="dropdown-item" href="#">語言</a></li>
+                            <li><a class="dropdown-item" href="#">程式</a></li>
+                            <li><a class="dropdown-item" href="#">設計</a></li>
+                            <li><a class="dropdown-item" href="#">行銷</a></li>
+                            <li><a class="dropdown-item" href="#">手作</a></li>
+                            <li><a class="dropdown-item" href="#">攝影</a></li>
+                            <li><a class="dropdown-item" href="#">人文</a></li>
+                            <li><a class="dropdown-item" href="#">音樂</a></li>
+                            <li><a class="dropdown-item" href="#">藝術</a></li>
+                            
+                        </ul>
                         </ul>
                     </li>
 
@@ -121,12 +129,38 @@
                 </form>
 
                 <!-- login -->
-                <button class="btn btn-outline-light" type="submit"><i class="bi bi-person"></i></button>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login"><i
+                    class="bi bi-person"></i></button>
 
             </div>
 
         </div>
     </nav>
+
+      <!-- navbar in the login button -->
+      <div class="modal" id="user_login" data-bs-backdrop="static" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bi bi-person-fill"></span>
+                        <input type="text" class="form-control" placeholder="帳號" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bi bi-lock-fill"></span>
+                        <input type="text" class="form-control" placeholder="密碼" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- introduce top -->
     <div id="course_overview">
@@ -176,7 +210,7 @@
         </ul>
     </div>
 
-    <div class="container" >
+    <div class="container">
 
         <!-- container with sidebar -->
         <div class="row rounded-3">

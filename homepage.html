@@ -12,41 +12,42 @@
         .margin_top_100 {
             margin-top: 100px;
         }
-        
+
         footer {
             background-color: turquoise;
             margin-bottom: 0px;
         }
-        
+
         .explore_button_row_height {
             height: 50px;
         }
-        
-        .footer_a:link{
+
+        .footer_a:link {
             text-decoration: none;
         }
-        .reaction_opacity{
+
+        .reaction_opacity {
             opacity: 0.75;
         }
-        
-        .reaction_opacity:hover{
+
+        .reaction_opacity:hover {
             opacity: 1;
         }
 
-        body{
+        body {
             background-color: lightblue;
         }
-        
-        
+
+
         /* 以下測試 after testing pls remove all the class*/
         .test_background {
             background-color: lawngreen;
         }
-        
+
         .test_background_inside1 {
             background-color: aqua;
         }
-        
+
         .test_background_inside2 {
             background-color: red;
         }
@@ -59,49 +60,83 @@
     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
         <div class="container-fluid">
             <!-- homepage icon -->
-            <a class="navbar-brand text-light reaction_opacity" href="#" ><span class="bi bi-mortarboard-fill"> Oline Course</span></a>
+            <a class="navbar-brand text-light reaction_opacity" href="#"><span class="bi bi-mortarboard-fill"> Oline
+                    Course</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light reaction_opacity" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-light reaction_opacity" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             探索
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">職場技能</a></li>
+                            <li><a class="dropdown-item" href="#">生活品味</a></li>
+                            <li><a class="dropdown-item" href="#">投資理財</a></li>
+                            <li><a class="dropdown-item" href="#">語言</a></li>
+                            <li><a class="dropdown-item" href="#">程式</a></li>
+                            <li><a class="dropdown-item" href="#">設計</a></li>
+                            <li><a class="dropdown-item" href="#">行銷</a></li>
+                            <li><a class="dropdown-item" href="#">手作</a></li>
+                            <li><a class="dropdown-item" href="#">攝影</a></li>
+                            <li><a class="dropdown-item" href="#">人文</a></li>
+                            <li><a class="dropdown-item" href="#">音樂</a></li>
+                            <li><a class="dropdown-item" href="#">藝術</a></li>
+                            
                         </ul>
                     </li>
-    
+
                 </ul>
-    
+
                 <!-- another dropdown but right -->
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light me-2" type="submit">Search</button>
                 </form>
-    
+
                 <!-- login -->
-                <button class="btn btn-outline-light" type="submit"><i class="bi bi-person"></i></button>
-    
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login"><i
+                        class="bi bi-person"></i></button>
+
             </div>
-    
+
         </div>
     </nav>
 
+    <!-- navbar in the login button -->
+    <div class="modal" id="user_login" data-bs-backdrop="static" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bi bi-person-fill"></span>
+                        <input type="text" class="form-control" placeholder="帳號" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bi bi-lock-fill"></span>
+                        <input type="text" class="form-control" placeholder="密碼" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
-    <div class="container" >
-        
+
+
+    <div class="container">
+
         <!-- 宣傳 -->
         <div class="carousel slide " id="carouselEvent" data-bs-ride="carousel" style="padding-top: 100px;">
             <div class="carousel-indicators">
@@ -249,7 +284,7 @@
 
 
 <footer class="margin_top_100 mb-0" style="background-color:rgb(0, 49, 79);">
-    <div class="container"  >
+    <div class="container">
         <div class="row ">
             <div class="col-3" style="margin:100px auto 100px auto">
                 <h5 class="text-info">關於</h5>
@@ -261,7 +296,7 @@
                 <br>
                 <a class="text-light footer_a reaction_opacity" href="">隱私權政策</a>
             </div>
-            <div class="col-3"  style="margin:100px auto 100px auto">
+            <div class="col-3" style="margin:100px auto 100px auto">
                 <h5 class="text-info">幫助</h5>
                 <a class="text-light footer_a reaction_opacity" href="">常見問題</a>
             </div>
@@ -269,7 +304,7 @@
             <div class="col-3"></div>
         </div>
     </div>
-    
+
 </footer>
 
 </html>
