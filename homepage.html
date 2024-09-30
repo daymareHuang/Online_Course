@@ -72,7 +72,7 @@
 
                 <button class="navbar-toggler ms-auto w-25 border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation"  style="width: 10%;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -158,10 +158,10 @@
     </div>
 
 
-    <div class="container">
+    <div class="container" style="padding-top: 100px;">
 
         <!-- 宣傳 -->
-        <div class="carousel slide " id="carouselEvent" data-bs-ride="carousel" style="padding-top: 100px;">
+        <div class="carousel slide " id="carouselEvent" data-bs-ride="carousel" >
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselEvent" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -308,6 +308,32 @@
 
     </div>
 
+
+    <script>
+        //JS
+        let lastPos = 0
+        const collapse = document.querySelector(".navbar-toggler")
+        const collapse_content = document.querySelector(".navbar-collapse")
+        const explore = document.querySelector(".dropdown-toggle")
+        const menu = document.querySelector(".dropdown-menu")
+
+        // 監聽scroll事件
+        document.addEventListener('scroll', () => {
+            let currentPos = window.scrollY;
+            //   往下滑
+            if (currentPos > lastPos ) {
+                
+                collapse.setAttribute("aria-expanded", "false")
+                collapse.classList.add("collapsed")
+                collapse_content.classList.remove("show")
+                explore.classList.remove("show")
+                menu.classList.remove("show")
+
+            }
+            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+        })
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"

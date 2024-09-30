@@ -39,6 +39,16 @@
             background-color: lightblue;
         }
 
+        .card_anchor{
+
+            text-decoration: none;
+            color: black;
+        }
+        .card_anchor:hover{
+
+            color:black;
+        }
+
 
         /* 以下測試 after testing pls remove all the class*/
         .test_background {
@@ -69,9 +79,9 @@
                     </a>
                 </div>
 
-                <button class="navbar-toggler ms-auto w-25 border-0" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation" style="width: 10%;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -109,8 +119,7 @@
                             <form class="d-flex " role="search">
                                 <div class="input-group">
                                     <span class="input-group-text bi bi-search"></span>
-                                    <input class="form-control " type="search" placeholder="Search"
-                                        aria-label="Search">
+                                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
                                 </div>
                                 <button class="btn btn-outline-light " type="submit">Search</button>
                             </form>
@@ -118,7 +127,8 @@
 
                         <!-- login -->
                         <div class="col-1">
-                            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login" title="">
+                            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login"
+                                title="">
                                 <span class="bi bi-person"></span>
                             </button>
                         </div>
@@ -156,6 +166,170 @@
         </div>
     </div>
 
+
+    <div class="container" style="padding-top: 100px;">
+
+        <!-- title -->
+        <h1 class="mb-5">探索</h1>
+
+        <!-- popular -->
+        <h3 class="mb-3"> 近期熱門</h3>
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="card mb-3 border-0" style="max-width: 540px; background-color: lightblue;">
+                    <div class="row g-0">
+                        <div class="col-md-6 m-auto">
+                            <img src="https://dummyimage.com/271x168/00ff5e/ffffff" class="img-fluid rounded-start"
+                                alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 ">
+                <div class="card mb-3 border-0" style="max-width: 540px; background-color: lightblue;">
+                    <div class="row g-0">
+                        <div class="col-md-6 m-auto">
+                            <img src="https://dummyimage.com/271x168/00ff5e/ffffff" class="img-fluid rounded-start"
+                                alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <!-- all -->
+        <h3 class="margin_top_100 mb-3">總覽</h3>
+        <!-- if it is possible pls do a scroll down and add new four card row -->
+         <!-- make the card with reaction :
+          1.photo get big card should can be click no matter the img or card body
+          2.card is a link-->
+
+        <div class="card-group row">
+            <div class="row">
+                <div class="col-lg-3 mb-5">
+                    <a href="" class="card_anchor">
+                        <div class="card h-100">
+                            <div class="bg-image hover-zoom">
+                                <img src="https://dummyimage.com/271x168/00ff5e/ffffff" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <a href="" class="card_anchor">
+
+                        <div class="card h-100">
+                            <img src="https://dummyimage.com/271x168/00ff5e/ffffff" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                    content.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <a href="" class="card_anchor">
+
+                        <div class="card h-100">
+                            <img src="https://dummyimage.com/271x168/00ff5e/ffffff" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This card has even longer content than the first to show that equal
+                                    height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <a href="" class="card_anchor">
+
+                        <div class="card h-100">
+                            
+                            <img src="https://dummyimage.com/271x168/00ff5e/ffffff" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This card has even longer content than the first to show that equal
+                                    height action.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        //JS
+        let lastPos = 0
+        const collapse = document.querySelector(".navbar-toggler")
+        const collapse_content = document.querySelector(".navbar-collapse")
+        const explore = document.querySelector(".dropdown-toggle")
+        const menu = document.querySelector(".dropdown-menu")
+
+        // 監聽scroll事件
+        document.addEventListener('scroll', () => {
+            let currentPos = window.scrollY;
+            //   往下滑
+            if (currentPos > lastPos) {
+
+                collapse.setAttribute("aria-expanded", "false")
+                collapse.classList.add("collapsed")
+                collapse_content.classList.remove("show")
+                explore.classList.remove("show")
+                menu.classList.remove("show")
+
+            }
+            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+        })
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
