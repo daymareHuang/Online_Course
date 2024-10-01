@@ -84,7 +84,8 @@
 </head>
 
 <!-- content only -->
- <!-- how to present those topic with some different types -->
+<!-- how to present those topic with some different types -->
+
 <body>
     <!-- navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg bg-primary fixed-top ">
@@ -119,7 +120,7 @@
                                         <li><a class="dropdown-item" href="#">生活品味</a></li>
                                         <li><a class="dropdown-item" href="#">投資理財</a></li>
                                         <li><a class="dropdown-item" href="#">語言</a></li>
-                                        <li><a class="dropdown-item" href="#">程式</a></li>
+                                        <li><a class="dropdown-item" href="./explore.html">程式</a></li>
                                         <li><a class="dropdown-item" href="#">設計</a></li>
                                         <li><a class="dropdown-item" href="#">行銷</a></li>
                                         <li><a class="dropdown-item" href="#">手作</a></li>
@@ -138,8 +139,7 @@
                             <form class="d-flex " role="search">
                                 <div class="input-group">
                                     <span class="input-group-text bi bi-search"></span>
-                                    <input class="form-control " type="search" placeholder="Search"
-                                        aria-label="Search">
+                                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
                                 </div>
                                 <button class="btn btn-outline-light " type="submit">Search</button>
                             </form>
@@ -147,7 +147,8 @@
 
                         <!-- login -->
                         <div class="col-1">
-                            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login" title="">
+                            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login"
+                                title="">
                                 <span class="bi bi-person"></span>
                             </button>
                         </div>
@@ -186,14 +187,15 @@
 
     <!-- introduce video and title -->
     <div class="container margin_top_100 pt-3" id="course_overview">
-        <!-- breadcrumb -->
-        <nav aria-label="breadcrumb">
+        <!-- title breadcrumb-->
+        <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item reaction_opacity"><a href="./homepage.html"
-                        style="text-decoration: none;">首頁</a></li>
-                <li class="breadcrumb-item reaction_opacity"><a href="" style="text-decoration: none;">程式</a></li>
+                <li class="breadcrumb-item reaction_opacity"> 探索</li>
+                <li class="breadcrumb-item reaction_opacity"><a href="./explore.html"
+                        class=" text-decoration-none">程式</a></li>
             </ol>
         </nav>
+        <h1 class="mb-5">程式</h1>
 
         <!-- course overview -->
         <div class="row w-100">
@@ -203,9 +205,9 @@
             <div class="col-xl-5">
                 <div class="card w-100 h-100">
                     <div class="card-body">
-                        <h6 class="card-title">author</h6>
-                        <h1 class="card-title">跟著版塊做網站：用動態特效點滿視覺創意</h2>
-                            <p class="card-text">版塊帶你跟上網站設計趨勢！從團隊核心價值「動態回推設計」出發，學會設計動態特效網站！</p>
+                        <h6 class="card-title">菜鳥工程師</h6>
+                        <h1 class="card-title">HTML：網頁的地基以及架構</h2>
+                            <p class="card-text">從 0 開始！讓你用 18 個小時，學會編寫 HTML ，讓你輕鬆的架構出一整個網頁。</p>
                             <!-- <a href="#" class="btn btn-primary">Button</a> -->
                     </div>
                 </div>
@@ -213,87 +215,215 @@
         </div>
     </div>
 
-    <!-- course bar -->
-    <!-- should be fixed and visible when scroll to this area -->
 
     <div class="container w-100">
-        <div id="course_bar" class=" sticky-top" style=" background-color: lightblue;">
-            <nav class="nav">
-                <a class="nav-link fs-6 text-secondary reaction_opacity" href="#course_introduce">關於課程</a>
-                <span class="text-secondary opacity-50"> | </span>
-                <a class="nav-link fs-6 text-secondary reaction_opacity" href="#course_catalog">章節單元</a>
-                <span class="text-secondary opacity-50"> | </span>
-                <a class="nav-link fs-6 text-secondary reaction_opacity" href="#course_qa">Q&A</a>
-                <span class="text-secondary opacity-50"> | </span>
-                <a class="nav-link fs-6 text-secondary reaction_opacity" href="#course_teacher_info">老師資訊</a>
 
-            </nav>
-        </div>
+        <!-- course bar -->
+        <!-- scrollspy -->
+        <nav id="course_bar" class="navbar px-3 mb-3 sticky-top" style=" background-color: lightblue;">
+            <ul class="nav nav-pills ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#course_introduce">關於課程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#course_catalog">章節單元</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#course_qa">Q&A</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#course_teacher_info">老師資訊</a>
+                </li>
+
+            </ul>
+        </nav>
 
         <!-- container with sidebar -->
         <div class="row rounded-3 w-100">
             <!-- on the left of the course information -->
             <div class="col-xl-9">
 
-                <!-- introduce -->
-                <!-- when this scrolled to the top make the nav bar changed -->
-                <div id="course_introduce" style="margin-bottom: 115px;"></div>
-                <div class="card w-100">
-                    <div class="card-body ">
-                        <h4 class="card-title">關於課程</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                <div data-bs-spy="scroll" data-bs-target="#course_bar" data-bs-root-margin="0px 0px -40%"
+                    data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+
+                    <!-- introduce -->
+                    <!-- when this scrolled to the top make the nav bar changed -->
+                    <h4 class="card-title fw-bolder mb-3 mt-5">關於課程</h4>
+                    <div id="course_introduce" class="card w-100  ">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="row">
+                                        <div class="col-2 pt-2">
+                                            <span class="bi bi-collection-play-fill fs-3">
+                                            </span>
+                                        </div>
+                                        <div class="col-10 pt-2">
+                                            <div class="row">
+                                                <span>課程包含</span>
+                                            </div>
+                                            <div class="row">
+                                                <b>包含 4 章 13 單元</b>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="row">
+                                        <div class="col-2 pt-2">
+                                            <span class="bi bi-clock-fill fs-3"></span>
+                                        </div>
+                                        <div class="col-10 pt-2">
+                                            <div class="row"><span>課程時長</span></div>
+                                            <div class="row"><b>18 小時</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="row">
+                                        <div class="col-2 pt-2">
+                                            <span class="bi bi-eye-fill fs-3"></span>
+                                        </div>
+                                        <div class="col-10 pt-2">
+                                            <div class="row"><span>觀看限制</span></div>
+                                            <div class="row"><b>不限觀看次數</b></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- catalog -->
+
+                    <h4 class="card-title fw-bolder mb-3  margin_top_100 ">章節單元</h4>
+                    <div id="course_catalog" class="card w-100">
+                        <div class="card-body">
+                            <!-- accordion -->
+                            <div class="accordion" id="accordionPanelsStayOpen_catalog">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelCatalog-collapseOne" aria-expanded="true"
+                                            aria-controls="panelCatalog-collapseOne">
+                                            <span class="bi bi-1-circle-fill me-3"></span> <b class="fs-5">HTML</b>
+                                        </button>
+                                    </h2>
+                                    <div id="panelCatalog-collapseOne" class="accordion-collapse collapse show">
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Element</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Head and body</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Font Size</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">List</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Link</div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelCatalog-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelCatalog-collapseTwo">
+                                            <span class="bi bi-2-circle-fill me-3"></span> <b class="fs-5">Image</b>
+                                        </button>
+                                    </h2>
+                                    <div id="panelCatalog-collapseTwo" class="accordion-collapse collapse">
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Image</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Height and Width</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Figure</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Viedo Frame</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelCatalog-collapseFour"
+                                            aria-expanded="false" aria-controls="panelCatalog-collapseFour">
+                                            <span class="bi bi-3-circle-fill me-3"></span> <b class="fs-5">Form</b>
+                                        </button>
+                                    </h2>
+                                    <div id="panelCatalog-collapseFour" class="accordion-collapse collapse">
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Elements</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Types</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelCatalog-collapseThree"
+                                            aria-expanded="false" aria-controls="panelCatalog-collapseThree">
+                                            <span class="bi bi-3-circle-fill me-3"></span> <b class="fs-5">Table</b>
+                                        </button>
+                                    </h2>
+                                    <div id="panelCatalog-collapseThree" class="accordion-collapse collapse">
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Table</div>
+                                        <div class="accordion-item fs-6 ps-5 pt-2 pb-2 border-0">Colspan & Rowspan</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q&A -->
+                    <!-- <div  style="margin-bottom: 115px;"></div> -->
+                    <h4 class="card-title fw-bolder mb-3 margin_top_100">Q&A</h4>
+                    <div id="course_qa" class="card w-100  ">
+                        <div class="card-body">
+                            <div class="accordion" id="accordionPanelsStayOpen_qa">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelQA-collapseOne" aria-expanded="true"
+                                            aria-controls="panelQA-collapseOne">
+                                            <span class="bi bi-question-circle me-3"></span> <b>我沒有學過程式，這堂課適合我嗎？</b>
+                                        </button>
+                                    </h2>
+                                    <div id="panelQA-collapseOne" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            <p>適合</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelQA-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelQA-collapseTwo">
+                                            <span class="bi bi-question-circle me-3"></span> <b>線上課程有觀看限制嗎？是直播嗎？</b>
+                                        </button>
+                                    </h2>
+                                    <div id="panelQA-collapseTwo" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            <p>本課程為線上預錄好的影片，並非直播，同學可以在任意的時間、地點、不限次數觀看。</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- teacher info -->
+                    <!-- <div  style="margin-bottom: 115px;"> </div> -->
+                    <h4 class="card-title fw-bolder mb-3 margin_top_100">老師資訊</h4>
+                    <div id="course_teacher_info" class="card w-100 ">
+                        <div class="card-body">
+
+                            <div class="ms-5 mt-5">
+                                <h4 class="card-subtitle mb-2 fw-bolder">菜鳥工程師</h4>
+                                <p class="text-muted">僅僅是一位剛入行的工程師</p>
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
-
-                <!-- catalog -->
-                <div id="course_catalog" style="margin-bottom: 115px;"></div>
-                <div class="card w-100 margin_top_100">
-                    <div class="card-body">
-                        <h4 class="card-title">章節單元</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-
-                <!-- Q&A -->
-                <div id="course_qa" style="margin-bottom: 115px;"></div>
-                <div class="card w-100 margin_top_100">
-                    <div class="card-body">
-                        <h4 class="card-title">Q&A</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-
-                <!-- teacher info -->
-                <div id="course_teacher_info" style="margin-bottom: 115px;"> </div>
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h4 class="card-title">老師資訊</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- sidebar on the right of the course information  -->
-          
-            <div class=" col-xl-3 " style="margin-top: 115px; ">
-                <div class="card" style="position: sticky; top:115px;">
+            <!-- sidebar on the right of the course price  -->
+            <div class=" col-xl-3 pt-3">
+                <div class="card mt-5 " style="position: sticky; top:115px;">
                     <div class="card-header">
                         購買單堂課
                     </div>
@@ -338,8 +468,8 @@
         document.addEventListener('scroll', () => {
             let currentPos = window.scrollY;
             //   往下滑
-            if (currentPos > lastPos ) {
-                if (currentPos > 650){
+            if (currentPos > lastPos) {
+                if (currentPos > 500) {
                     nav.style.top = "0px" //讓nav bar消失
                     navbar.style.top = "-60px"
                 }
