@@ -48,18 +48,8 @@
             box-shadow: 0px 0px 10px 5px #bafffc;
         }
 
-
-        /* 以下測試 after testing pls remove all the class*/
-        .test_background {
-            background-color: lawngreen;
-        }
-
-        .test_background_inside1 {
-            background-color: aqua;
-        }
-
-        .test_background_inside2 {
-            background-color: red;
+        .card-title {
+            font-weight: bolder;
         }
     </style>
 </head>
@@ -72,7 +62,7 @@
             <div class="row w-100">
 
                 <!-- homepage icon -->
-                <div class="col-2 m-auto">
+                <div class="col-2 my-auto">
                     <a class="navbar-brand text-light reaction_opacity" href="./homepage.html">
                         <span class="bi bi-mortarboard-fill"> Online Course</span>
                     </a>
@@ -180,7 +170,7 @@
         <!-- popular -->
         <h3 class="mb-3"> 近期熱門</h3>
         <div class="row">
-            <div class="col-lg-6 ">
+            <div class="col-lg-6 mb-3">
                 <a href="./HTML_class.html" class="link-dark text-decoration-none">
                     <div class="card mb-3 border-0 card_reaciton"
                         style="max-width: 540px; background-color: lightblue;">
@@ -190,11 +180,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
-                                    <h5 class="card-title">HTML：網頁的地基以及架構</h5>
+                                    <h5 class="card-title">HTML：輕鬆建造網頁的地基以及架構</h5>
                                     <h6 class="card-text text-muted mb-3">by 菜鳥工程師</h6>
-                                   
+
                                     <span class="fs-4 fw-bolder">NT$2,900</span> &nbsp;
-                                    <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
+                                    <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,200</span>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +192,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-6 ">
+            <div class="col-lg-6 mb-3">
                 <a href="./CSS_class.html" class="link-dark text-decoration-none">
                     <div class="card mb-3 border-0 card_reaciton"
                         style="max-width: 540px; background-color: lightblue;">
@@ -212,9 +202,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <h5 class="card-title">CSS：輕鬆使用網頁的外觀以及裝潢</h5>
+                                    <h6 class="card-text text-muted mb-3">by 菜鳥工程師</h6>
+                                    <span class="fs-4 fw-bolder">NT$3,500</span> &nbsp;
+                                    <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,800</span>
                                 </div>
                             </div>
                         </div>
@@ -239,29 +230,28 @@
 
                             <img src="./media/HTML_1024_576.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">HTML：網頁的地基以及架構</h5>
+                                <h5 class="card-title">HTML：輕鬆建造網頁的地基以及架構</h5>
                                 <h6 class="card-text text-muted mb-3">by 菜鳥工程師</h6>
-                                
                                 <span class="fs-4 fw-bolder">NT$2,900</span> &nbsp;
-                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,200</span>
                             </div>
-
                         </div>
                     </a>
                 </div>
+
                 <div class="col-lg-3 mb-5">
                     <a href="./CSS_class.html" class="link-dark text-decoration-none">
                         <div class="card card_reaciton">
                             <img src="./media/CSS_1024_576.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This card has supporting text below as a natural lead-in to
-                                    additional
-                                    content.</p>
+                                <h5 class="card-title">CSS：輕鬆使用網頁的外觀以及裝潢</h5>
+                                <h6 class="card-text text-muted mb-3">by 菜鳥工程師</h6>
+                                <span class="fs-4 fw-bolder">NT$3,500</span> &nbsp;
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,800</span>
                             </div>
-                            <div class="card-footer">
+                            <!-- <div class="card-footer">
                                 <small class="text-muted">Last updated 3 mins ago</small>
-                            </div>
+                            </div> -->
                         </div>
                     </a>
                 </div>
@@ -271,14 +261,12 @@
                         <div class="card card_reaciton">
                             <img src="./media/JS_1024_576.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This card has even longer content than the first to show that
-                                    equal
-                                    height action.</p>
+                                <h5 class="card-title">Javascript：簡單建造網頁的互動以及功能</h5>
+                                <h6 class="card-text text-muted mb-3">by 菜鳥工程師</h6>
+                                <span class="fs-4 fw-bolder">NT$7,000</span> &nbsp;
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$7,200</span>
                             </div>
-                            
+
                         </div>
                     </a>
                 </div>
@@ -289,14 +277,12 @@
 
                             <img src="./media/bootstrap_1024_576.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This card has even longer content than the first to show that
-                                    equal
-                                    height action.</p>
+                                <h5 class="card-title">Bootstrap:輕鬆利用工具無痛建造網站</h5>
+                                <h6 class="card-text text-muted mb-3">by 菜鳥工程師</h6>
+                                <span class="fs-4 fw-bolder">NT$3,500</span> &nbsp;
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,800</span>
                             </div>
-                            
+
                         </div>
                     </a>
                 </div>
@@ -308,28 +294,37 @@
 
 
     <script>
-        //JS
-        let lastPos = 0
-        const collapse = document.querySelector(".navbar-toggler")
-        const collapse_content = document.querySelector(".navbar-collapse")
-        const explore = document.querySelector(".dropdown-toggle")
-        const menu = document.querySelector(".dropdown-menu")
+        window.onload = () => {
+            let lastPos = 0
+            const collapse = document.querySelector(".navbar-toggler")
+            const collapse_content = document.querySelector(".navbar-collapse")
+            const explore = document.querySelector(".dropdown-toggle")
+            const menu = document.querySelector(".dropdown-menu")
 
-        // 監聽scroll事件
-        document.addEventListener('scroll', () => {
-            let currentPos = window.scrollY;
-            //   往下滑
-            if (currentPos > lastPos) {
+            // 監聽scroll事件
+            document.addEventListener('scroll', () => {
+                let currentPos = window.scrollY;
+                //   往下滑
+                if (currentPos > lastPos) {
 
-                collapse.setAttribute("aria-expanded", "false")
-                collapse.classList.add("collapsed")
-                collapse_content.classList.remove("show")
-                explore.classList.remove("show")
-                menu.classList.remove("show")
+                    collapse.setAttribute("aria-expanded", "false")
+                    collapse.classList.add("collapsed")
+                    collapse_content.classList.remove("show")
+                    explore.classList.remove("show")
+                    menu.classList.remove("show")
 
-            }
-            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
-        })
+                }
+                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+            })
+
+            // card title 太多的部分省略
+            let card_title = document.querySelectorAll(".card-title")
+            card_title.forEach((title) => {
+                if (title.innerText.length >= 25) {
+                    title.innerText = title.innerText.substr(0, 25) + '...'
+                }
+            })
+        }
 
     </script>
 

@@ -67,21 +67,6 @@
             margin-right: auto;
             margin-left: auto;
         }
-
-
-
-        /* 以下測試 after testing pls remove all the class*/
-        .test_background {
-            background-color: lawngreen;
-        }
-
-        .test_background_inside1 {
-            background-color: aqua;
-        }
-
-        .test_background_inside2 {
-            background-color: red;
-        }
     </style>
 </head>
 
@@ -95,7 +80,7 @@
             <div class="row w-100">
 
                 <!-- homepage icon -->
-                <div class="col-2 m-auto">
+                <div class="col-2 my-auto">
                     <a class="navbar-brand text-light reaction_opacity" href="./homepage.html">
                         <span class="bi bi-mortarboard-fill"> Online Course</span>
                     </a>
@@ -207,12 +192,12 @@
             <div class="col-xl-5">
                 <div class="card w-100 h-100">
                     <div class="card-body">
-                        <h6 class="card-title">菜鳥工程師</h6>
+                        <h6 class="card-text">菜鳥工程師</h6>
                         <h1 class="card-title">HTML：輕鬆建造網頁的地基以及架構</h2>
                             <p class="card-text text-muted ">從 0 開始！讓你用 18 個小時，學會編寫 HTML ，讓你輕鬆的架構出一整個網頁。還在煩惱要怎麼寫出一個網頁嗎?
                                 想要為自己寫出一個網頁嗎? 但是卻都找不到人幫忙寫HTML，這課程將會是你的好選擇。
                             </p>
-                            
+
                     </div>
                 </div>
             </div>
@@ -447,7 +432,7 @@
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
                             <span class="fs-2 fw-bolder">NT$2,900</span> &nbsp;
-                            <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
+                            <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,200</span>
                             <footer>
                                 <button class="btn w-100 btn-primary">立即購買</button>
                             </footer>
@@ -471,37 +456,40 @@
 
 
     <script>
-        //JS
-        let lastPos = 0
-        const nav = document.getElementById("course_bar")
-        const navbar = document.getElementById("navbar")
-        const collapse = document.querySelector(".navbar-toggler")
-        const collapse_content = document.querySelector(".navbar-collapse")
-        const explore = document.querySelector(".dropdown-toggle")
-        const menu = document.querySelector(".dropdown-menu")
+        window.onload = () => {
+            //JS
+            let lastPos = 0
+            const nav = document.getElementById("course_bar")
+            const navbar = document.getElementById("navbar")
+            const collapse = document.querySelector(".navbar-toggler")
+            const collapse_content = document.querySelector(".navbar-collapse")
+            const explore = document.querySelector(".dropdown-toggle")
+            const menu = document.querySelector(".dropdown-menu")
 
 
-        // 監聽scroll事件
-        document.addEventListener('scroll', () => {
-            let currentPos = window.scrollY;
-            //   往下滑
-            if (currentPos > lastPos) {
-                if (currentPos > 700) {
-                    nav.style.top = "0px" //讓nav bar消失
-                    navbar.style.top = "-60px"
+            // 監聽scroll事件
+            document.addEventListener('scroll', () => {
+                let currentPos = window.scrollY;
+                //   往下滑
+                if (currentPos > lastPos) {
+                    if (currentPos > 700) {
+                        nav.style.top = "0px" //讓nav bar消失
+                        navbar.style.top = "-60px"
+                    }
+                    collapse.setAttribute("aria-expanded", "false")
+                    collapse.classList.add("collapsed")
+                    collapse_content.classList.remove("show")
+                    explore.classList.remove("show")
+                    menu.classList.remove("show")
+
+                } else {
+                    nav.style.top = "56px"  //讓nav bar出現
+                    navbar.style.top = "0px"
                 }
-                collapse.setAttribute("aria-expanded", "false")
-                collapse.classList.add("collapsed")
-                collapse_content.classList.remove("show")
-                explore.classList.remove("show")
-                menu.classList.remove("show")
+                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+            })
+        }
 
-            } else {
-                nav.style.top = "56px"  //讓nav bar出現
-                navbar.style.top = "0px"
-            }
-            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
-        })
 
     </script>
 </body>

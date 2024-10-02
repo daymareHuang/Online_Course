@@ -47,18 +47,8 @@
             box-shadow: 0px 0px 10px 5px #bafffc;
         }
 
-
-        /* 以下測試 after testing pls remove all the class*/
-        .test_background {
-            background-color: lawngreen;
-        }
-
-        .test_background_inside1 {
-            background-color: aqua;
-        }
-
-        .test_background_inside2 {
-            background-color: red;
+        .card-title {
+            font-weight: bolder;
         }
     </style>
 </head>
@@ -74,7 +64,7 @@
             <div class="row w-100">
 
                 <!-- homepage icon -->
-                <div class="col-2 m-auto">
+                <div class="col-2 my-auto">
                     <a class="navbar-brand text-light reaction_opacity" href="./homepage.html"><span
                             class="bi bi-mortarboard-fill"> Online Course</span>
                     </a>
@@ -212,15 +202,15 @@
         <h2 class="margin_top_100">最新募資課程</h2>
         <div class="card-group mb-5" style="margin: auto">
             <div class="row">
-                <div class="col-lg-4 mb-3">
+                <div class="col-lg-4 mb-3 ">
                     <a href="./HTML_class.html" class="link-dark text-decoration-none">
                         <div class="card card_reaciton" style="margin: 10px; border-radius: 20px;">
                             <img src="./media/HTML_1024_576.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">HTML：網頁的地基以及架構</h5>
+                                <h5 class="card-title">HTML：輕鬆建造網頁的地基以及架構</h5>
                                 <h6 class="card-text text-muted mb-5">by 菜鳥工程師</h6>
                                 <span class="fs-4 fw-bolder ">NT$2,900</span> &nbsp;
-                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through ">$3200</span>
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through ">$3,200</span>
 
                             </div>
                         </div>
@@ -236,7 +226,7 @@
                                 <h5 class="card-title">CSS：輕鬆使用網頁的外觀以及裝潢</h5>
                                 <h6 class="card-text text-muted mb-5">by 菜鳥工程師</h6>
                                 <span class="fs-4 fw-bolder">NT$3,500</span> &nbsp;
-                            <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,800</span>
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,800</span>
                             </div>
                         </div>
                     </a>
@@ -250,8 +240,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">CSS：輕鬆使用網頁的外觀以及裝潢</h5>
                                 <h6 class="card-text text-muted mb-5">by 菜鳥工程師</h6>
-                                <span class="fs-4 fw-bolder">NT$3,500</span> &nbsp;
-                            <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3,800</span>
+                                <span class="fs-4 fw-bolder">NT$7,000</span> &nbsp;
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$7,200</span>
                             </div>
                         </div>
                     </a>
@@ -332,28 +322,39 @@
 
 
     <script>
-        //JS
-        let lastPos = 0
-        const collapse = document.querySelector(".navbar-toggler")
-        const collapse_content = document.querySelector(".navbar-collapse")
-        const explore = document.querySelector(".dropdown-toggle")
-        const menu = document.querySelector(".dropdown-menu")
+        window.onload = () => {
+            //JS
+            let lastPos = 0
+            const collapse = document.querySelector(".navbar-toggler")
+            const collapse_content = document.querySelector(".navbar-collapse")
+            const explore = document.querySelector(".dropdown-toggle")
+            const menu = document.querySelector(".dropdown-menu")
 
-        // 監聽scroll事件
-        document.addEventListener('scroll', () => {
-            let currentPos = window.scrollY;
-            //   往下滑
-            if (currentPos > lastPos) {
+            // 監聽scroll事件
+            document.addEventListener('scroll', () => {
+                let currentPos = window.scrollY;
+                //   往下滑
+                if (currentPos > lastPos) {
 
-                collapse.setAttribute("aria-expanded", "false")
-                collapse.classList.add("collapsed")
-                collapse_content.classList.remove("show")
-                explore.classList.remove("show")
-                menu.classList.remove("show")
+                    collapse.setAttribute("aria-expanded", "false")
+                    collapse.classList.add("collapsed")
+                    collapse_content.classList.remove("show")
+                    explore.classList.remove("show")
+                    menu.classList.remove("show")
 
-            }
-            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
-        })
+                }
+                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+            })
+        }
+
+        // card title 太多的部分省略
+        let card_title = document.querySelectorAll(".card-title")
+            card_title.forEach((title) => {
+                if (title.innerText.length >= 25) {
+                    title.innerText = title.innerText.substr(0, 25) + '...'
+                }
+            })
+
 
     </script>
 

@@ -95,7 +95,7 @@
             <div class="row w-100">
 
                 <!-- homepage icon -->
-                <div class="col-2 m-auto">
+                <div class="col-2 my-auto">
                     <a class="navbar-brand text-light reaction_opacity" href="./homepage.html">
                         <span class="bi bi-mortarboard-fill"> Online Course</span>
                     </a>
@@ -212,7 +212,7 @@
                             <p class="card-text text-muted">從 0 開始！讓你用 18 個小時，學會編寫 CSS
                                 ，讓你輕鬆的把網頁變成美美的。還在為剛寫出來的HTML網頁，醜醜的外觀感到苦惱嗎?
                                 還在想為什麼別人的網頁看起來那麼好看而感到困惑嗎? 可是又找不到人幫忙寫CSS，這個課程將會是你的好選擇。</p>
-                            
+
                     </div>
                 </div>
             </div>
@@ -381,7 +381,8 @@
                                         </button>
                                     </h2>
                                     <div id="panelCatalog-collapseFour" class="accordion-collapse collapse">
-                                        <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Width and Height
+                                        <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Width
+                                            and Height
                                         </div>
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
                                             Padding and Margin</div>
@@ -429,10 +430,11 @@
                                         </button>
                                     </h2>
                                     <div id="panelCatalog-collapseSix" class="accordion-collapse collapse">
-                                        <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Static
+                                        <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
+                                            Static
                                         </div>
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
-                                           Fixed</div>
+                                            Fixed</div>
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
                                             Relative</div>
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
@@ -460,7 +462,7 @@
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
                                             RWD</div>
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
-                                           @media</div>
+                                            @media</div>
 
                                     </div>
                                 </div>
@@ -474,7 +476,8 @@
                                         </button>
                                     </h2>
                                     <div id="panelCatalog-collapseEight" class="accordion-collapse collapse">
-                                        <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Animation
+                                        <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
+                                            Animation
                                         </div>
                                         <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">
                                             @keyframe</div>
@@ -576,37 +579,40 @@
 
 
     <script>
-        //JS
-        let lastPos = 0
-        const nav = document.getElementById("course_bar")
-        const navbar = document.getElementById("navbar")
-        const collapse = document.querySelector(".navbar-toggler")
-        const collapse_content = document.querySelector(".navbar-collapse")
-        const explore = document.querySelector(".dropdown-toggle")
-        const menu = document.querySelector(".dropdown-menu")
+        window.onload = () => {
+            //JS
+            let lastPos = 0
+            const nav = document.getElementById("course_bar")
+            const navbar = document.getElementById("navbar")
+            const collapse = document.querySelector(".navbar-toggler")
+            const collapse_content = document.querySelector(".navbar-collapse")
+            const explore = document.querySelector(".dropdown-toggle")
+            const menu = document.querySelector(".dropdown-menu")
 
 
-        // 監聽scroll事件
-        document.addEventListener('scroll', () => {
-            let currentPos = window.scrollY;
-            //   往下滑
-            if (currentPos > lastPos) {
-                if (currentPos > 700) {
-                    nav.style.top = "0px" //讓nav bar消失
-                    navbar.style.top = "-60px"
+            // 監聽scroll事件
+            document.addEventListener('scroll', () => {
+                let currentPos = window.scrollY;
+                //   往下滑
+                if (currentPos > lastPos) {
+                    if (currentPos > 700) {
+                        nav.style.top = "0px" //讓nav bar消失
+                        navbar.style.top = "-60px"
+                    }
+                    collapse.setAttribute("aria-expanded", "false")
+                    collapse.classList.add("collapsed")
+                    collapse_content.classList.remove("show")
+                    explore.classList.remove("show")
+                    menu.classList.remove("show")
+
+                } else {
+                    nav.style.top = "56px"  //讓nav bar出現
+                    navbar.style.top = "0px"
                 }
-                collapse.setAttribute("aria-expanded", "false")
-                collapse.classList.add("collapsed")
-                collapse_content.classList.remove("show")
-                explore.classList.remove("show")
-                menu.classList.remove("show")
+                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+            })
+        }
 
-            } else {
-                nav.style.top = "56px"  //讓nav bar出現
-                navbar.style.top = "0px"
-            }
-            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
-        })
 
     </script>
 </body>
