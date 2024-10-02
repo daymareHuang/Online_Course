@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>線上課程平台:課程2</title>
+</head>
+
+<body><!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+        <title>線上課程平台:課程1</title>
+        <style>
+            .margin_top_100 {
+                margin-top: 100px;
+            }
+    
+            footer {
+                background-color: turquoise;
+                margin-bottom: 0px;
+            }
+    
+            .explore_button_row_height {
+                height: 50px;
+            }
+    
+            .footer_a:link {
+                text-decoration: none;
+            }
+    
+            .reaction_opacity {
+                opacity: 0.75;
+            }
+    
+            .reaction_opacity:hover {
+                opacity: 1;
+            }
+    
+            .accordin_reaction:hover{
+                background-color: lightgray;
+            }
+    
+            body {
+                background-color: lightblue;
+            }
+    
+            .course_space {
+                height: 75px;
+            }
+    
+            #course_bar {
+                visibility: visible;
+                --bs-navbar-padding-x: 0;
+                --bs-navbar-padding-y: 0.5rem;
+                padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+            }
+    
+            #course_overview {
+                padding: 0 10% 0 10%;
+                background-color: white;
+                border-radius: 10px;
+                padding-bottom: 5%;
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 0;
+                width: 100%;
+                padding-right: calc(var(--bs-gutter-x) * 0.5);
+                padding-left: calc(var(--bs-gutter-x) * 0.5);
+                margin-right: auto;
+                margin-left: auto;
+            }
+    
+    
+    
+            /* 以下測試 after testing pls remove all the class*/
+            .test_background {
+                background-color: lawngreen;
+            }
+    
+            .test_background_inside1 {
+                background-color: aqua;
+            }
+    
+            .test_background_inside2 {
+                background-color: red;
+            }
+        </style>
+    </head>
+    
+    <!-- content only -->
+    <!-- how to present those topic with some different types -->
+    
+    <body>
+        <!-- navbar -->
+        <nav id="navbar" class="navbar navbar-expand-lg bg-primary fixed-top ">
+            <div class="container w-100 d-flex">
+                <div class="row w-100">
+    
+                    <!-- homepage icon -->
+                    <div class="col-2 m-auto">
+                        <a class="navbar-brand text-light reaction_opacity" href="./homepage.html">
+                            <span class="bi bi-mortarboard-fill"> Online Course</span>
+                        </a>
+                    </div>
+    
+                    <button class="navbar-toggler ms-auto w-25 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" style="width: 5%;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+    
+                    <div class="collapse navbar-collapse col-9 ms-1 " id="navbarSupportedContent">
+                        <div class="row w-100">
+                            <div class="col-1">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-light reaction_opacity" href="#"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            探索
+                                        </a>
+                                        <ul class="dropdown-menu w-100">
+                                            <li><a class="dropdown-item" href="#">職場技能</a></li>
+                                            <li><a class="dropdown-item" href="#">生活品味</a></li>
+                                            <li><a class="dropdown-item" href="#">投資理財</a></li>
+                                            <li><a class="dropdown-item" href="#">語言</a></li>
+                                            <li><a class="dropdown-item" href="./explore.html">程式</a></li>
+                                            <li><a class="dropdown-item" href="#">設計</a></li>
+                                            <li><a class="dropdown-item" href="#">行銷</a></li>
+                                            <li><a class="dropdown-item" href="#">手作</a></li>
+                                            <li><a class="dropdown-item" href="#">攝影</a></li>
+                                            <li><a class="dropdown-item" href="#">人文</a></li>
+                                            <li><a class="dropdown-item" href="#">音樂</a></li>
+                                            <li><a class="dropdown-item" href="#">藝術</a></li>
+    
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <!-- another dropdown but right -->
+                            <div class="col-10">
+                                <form class="d-flex " role="search">
+                                    <div class="input-group">
+                                        <span class="input-group-text bi bi-search"></span>
+                                        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                                    </div>
+                                    <button class="btn btn-outline-light " type="submit">Search</button>
+                                </form>
+                            </div>
+    
+                            <!-- login -->
+                            <div class="col-1">
+                                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#user_login"
+                                    title="">
+                                    <span class="bi bi-person"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </nav>
+    
+        <!-- navbar in the login button -->
+        <div class="modal" id="user_login" data-bs-backdrop="static" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">登入</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bi bi-person-fill"></span>
+                            <input type="text" class="form-control" placeholder="帳號" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bi bi-lock-fill"></span>
+                            <input type="text" class="form-control" placeholder="密碼" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary w-100">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- introduce video and title -->
+        <div class="container margin_top_100 pt-3" id="course_overview">
+            <!-- title breadcrumb-->
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>'">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item reaction_opacity"> 探索</li>
+                    <li class="breadcrumb-item reaction_opacity"><a href="./explore.html"
+                            class=" text-decoration-none">程式</a></li>
+                </ol>
+            </nav>
+            <h1 class="mb-5">程式</h1>
+    
+            <!-- course overview -->
+            <div class="row w-100">
+                <!-- course video -->
+                <div class="col-xl-7"><video class="w-100 rounded-3" src="./media/hacker1.mp4" controls loop muted
+                        poster="./media/HTML_1024_576.png"></video></div>
+                <div class="col-xl-5">
+                    <div class="card w-100 h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">菜鳥工程師</h6>
+                            <h1 class="card-title">HTML：網頁的地基以及架構</h2>
+                                <p class="card-text">從 0 開始！讓你用 18 個小時，學會編寫 HTML ，讓你輕鬆的架構出一整個網頁。</p>
+                                <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="container w-100">
+    
+            <!-- course bar -->
+            <!-- scrollspy -->
+            <nav id="course_bar" class="navbar px-3 mb-3 sticky-top" style=" background-color: lightblue;">
+                <ul class="nav nav-pills ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#course_introduce">關於課程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#course_catalog">章節單元</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#course_qa">Q&A</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#course_teacher_info">老師資訊</a>
+                    </li>
+    
+                </ul>
+            </nav>
+    
+            <!-- container with sidebar -->
+            <div class="row rounded-3 w-100">
+                <!-- on the left of the course information -->
+                <div class="col-xl-9">
+    
+                    <div data-bs-spy="scroll" data-bs-target="#course_bar" data-bs-root-margin="0px 0px -40%"
+                        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+    
+                        <!-- introduce -->
+                        <!-- when this scrolled to the top make the nav bar changed -->
+                        <h4 class="card-title fw-bolder mb-3 mt-5">關於課程</h4>
+                        <div id="course_introduce" class="card w-100  ">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="row">
+                                            <div class="col-2 pt-2">
+                                                <span class="bi bi-collection-play-fill fs-3">
+                                                </span>
+                                            </div>
+                                            <div class="col-10 pt-2">
+                                                <div class="row">
+                                                    <span>課程包含</span>
+                                                </div>
+                                                <div class="row">
+                                                    <b>包含 4 章 13 單元</b>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="row">
+                                            <div class="col-2 pt-2">
+                                                <span class="bi bi-clock-fill fs-3"></span>
+                                            </div>
+                                            <div class="col-10 pt-2">
+                                                <div class="row"><span>課程時長</span></div>
+                                                <div class="row"><b>18 小時</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="row">
+                                            <div class="col-2 pt-2">
+                                                <span class="bi bi-eye-fill fs-3"></span>
+                                            </div>
+                                            <div class="col-10 pt-2">
+                                                <div class="row"><span>觀看限制</span></div>
+                                                <div class="row"><b>不限觀看次數</b></div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- catalog -->
+    
+                        <h4 class="card-title fw-bolder mb-3  margin_top_100 ">章節單元</h4>
+                        <div id="course_catalog" class="card w-100">
+                            <div class="card-body">
+                                <!-- accordion -->
+                                <div class="accordion" id="accordionPanelsStayOpen_catalog">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelCatalog-collapseOne" aria-expanded="true"
+                                                aria-controls="panelCatalog-collapseOne">
+                                                <span class="bi bi-1-circle-fill me-3"></span> <b class="fs-5">HTML</b>
+                                            </button>
+                                        </h2>
+                                        <div id="panelCatalog-collapseOne" class="accordion-collapse collapse show">
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Element</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Head and body</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Font Size</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">List</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Link</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelCatalog-collapseTwo"
+                                                aria-expanded="false" aria-controls="panelCatalog-collapseTwo">
+                                                <span class="bi bi-2-circle-fill me-3"></span> <b class="fs-5">Image</b>
+                                            </button>
+                                        </h2>
+                                        <div id="panelCatalog-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Image</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Height and Width</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Figure</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Viedo Frame</div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelCatalog-collapseFour"
+                                                aria-expanded="false" aria-controls="panelCatalog-collapseFour">
+                                                <span class="bi bi-3-circle-fill me-3"></span> <b class="fs-5">Form</b>
+                                            </button>
+                                        </h2>
+                                        <div id="panelCatalog-collapseFour" class="accordion-collapse collapse">
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Elements</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Types</div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelCatalog-collapseThree"
+                                                aria-expanded="false" aria-controls="panelCatalog-collapseThree">
+                                                <span class="bi bi-3-circle-fill me-3"></span> <b class="fs-5">Table</b>
+                                            </button>
+                                        </h2>
+                                        <div id="panelCatalog-collapseThree" class="accordion-collapse collapse">
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Table</div>
+                                            <div class="accordion-item accordin_reaction fs-6 ps-5 pt-2 pb-2 border-0">Colspan & Rowspan</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Q&A -->
+                        <!-- <div  style="margin-bottom: 115px;"></div> -->
+                        <h4 class="card-title fw-bolder mb-3 margin_top_100">Q&A</h4>
+                        <div id="course_qa" class="card w-100  ">
+                            <div class="card-body">
+                                <div class="accordion" id="accordionPanelsStayOpen_qa">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelQA-collapseOne" aria-expanded="true"
+                                                aria-controls="panelQA-collapseOne">
+                                                <span class="bi bi-question-circle me-3"></span> <b>我沒有學過程式，這堂課適合我嗎？</b>
+                                            </button>
+                                        </h2>
+                                        <div id="panelQA-collapseOne" class="accordion-collapse collapse show">
+                                            <div class="accordion-body accordin_reaction">
+                                                <p>適合</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelQA-collapseTwo"
+                                                aria-expanded="false" aria-controls="panelQA-collapseTwo">
+                                                <span class="bi bi-question-circle me-3"></span> <b>線上課程有觀看限制嗎？是直播嗎？</b>
+                                            </button>
+                                        </h2>
+                                        <div id="panelQA-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body accordin_reaction">
+                                                <p>本課程為線上預錄好的影片，並非直播，同學可以在任意的時間、地點、不限次數觀看。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- teacher info -->
+                        <!-- <div  style="margin-bottom: 115px;"> </div> -->
+                        <h4 class="card-title fw-bolder mb-3 margin_top_100">老師資訊</h4>
+                        <div id="course_teacher_info" class="card w-100 ">
+                            <div class="card-body">
+    
+                                <div class="ms-5 mt-5">
+                                    <h4 class="card-subtitle mb-2 fw-bolder">菜鳥工程師</h4>
+                                    <p class="text-muted">僅僅是一位剛入行的工程師</p>
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- sidebar on the right of the course price  -->
+                <div class=" col-xl-3 pt-3">
+                    <div class="card mt-5 " style="position: sticky; top:115px;">
+                        <div class="card-header">
+                            購買單堂課
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <span class="fs-2 fw-bolder">NT$2,900</span> &nbsp;
+                                <span class="fw-lighter fs-6 opacity-50 text-decoration-line-through">$3200</span>
+                                <footer>
+                                    <button class="btn w-100 btn-primary">立即購買</button>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+    
+    
+        <script>
+            //JS
+            let lastPos = 0
+            const nav = document.getElementById("course_bar")
+            const navbar = document.getElementById("navbar")
+            const collapse = document.querySelector(".navbar-toggler")
+            const collapse_content = document.querySelector(".navbar-collapse")
+            const explore = document.querySelector(".dropdown-toggle")
+            const menu = document.querySelector(".dropdown-menu")
+    
+    
+            // 監聽scroll事件
+            document.addEventListener('scroll', () => {
+                let currentPos = window.scrollY;
+                //   往下滑
+                if (currentPos > lastPos) {
+                    if (currentPos > 500) {
+                        nav.style.top = "0px" //讓nav bar消失
+                        navbar.style.top = "-60px"
+                    }
+                    collapse.setAttribute("aria-expanded", "false")
+                    collapse.classList.add("collapsed")
+                    collapse_content.classList.remove("show")
+                    explore.classList.remove("show")
+                    menu.classList.remove("show")
+    
+                } else {
+                    nav.style.top = "56px"  //讓nav bar出現
+                    navbar.style.top = "0px"
+                }
+                lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+            })
+    
+        </script>
+    </body>
+    
+    
+    <footer class="margin_top_100 mb-0" style="background-color:rgb(0, 49, 79);">
+        <div class="container">
+            <div class="row ">
+                <div class="col-3" style="margin:100px auto 100px auto">
+                    <h5 class="text-info">關於</h5>
+                    <a class="text-light footer_a reaction_opacity" href="">關於我們</a>
+                    <br>
+                    <a class="text-light footer_a reaction_opacity" href="">使用者條款</a>
+                    <br>
+                    <a class="text-light footer_a reaction_opacity" href="">服務契約</a>
+                    <br>
+                    <a class="text-light footer_a reaction_opacity" href="">隱私權政策</a>
+                </div>
+                <div class="col-3" style="margin:100px auto 100px auto">
+                    <h5 class="text-info">幫助</h5>
+                    <a class="text-light footer_a reaction_opacity" href="">常見問題</a>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+        <span id="your-class-here">HTML5 Logo by <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></span>.
+    </footer>
+    
+    </html>
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+        <div class="container-fluid">
+            <!-- homepage icon -->
+            <a class="navbar-brand" href="#"><span class="bi bi-mortarboard-fill"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- another dropdown but right -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success me-2" type="submit">Search</button>
+                  </form>
+
+                  <!-- login -->
+                  <button class="btn btn-outline-success" type="submit"><i class="bi bi-person"></i></button>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
